@@ -31,7 +31,6 @@
 - num_epochs(int, defaults to 100): The number of epochs for training.
 
 # References
-- LSTM: Hochreiter, S., & Schmidhuber, J. (1997). Long short-term memory. Neural computation, 9(8), 1735-1780.
 - Multi-task-Stacked-Bi-LSTMs: Sung, M., Bagherzadeh, P., & Bergler, S. (2020, December). CLaC at SemEval-2020 Task 5: Muli-task Stacked Bi-LSTMs. In Proceedings of the Fourteenth Workshop on Semantic Evaluation (pp. 445-450).
 - Stanza: Qi, P., Zhang, Y., Zhang, Y., Bolton, J., & Manning, C. D. (2020). Stanza: A Python natural language processing toolkit for many human languages. arXiv preprint arXiv:2003.07082.
 - Spacy: Matthew Honnibal and Ines Montani. 2017. spaCy 2: Natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing. To appear (2017).
