@@ -2,7 +2,7 @@
 - Task: SemEval 2020 Task 5: Modelling Causal Reasoning in Language (Detecting Counterfactuals)
 - Subtask 1: Binary classification task classifying whether the given text is counterfactual or not.
 - Subtask 2: Span detection task detecting the span of the antecedent and the consequent.
-- Applied architecture: Multi-task Stacked Bi-LSTMs using grammatical feature.
+- Applied architecture: Multi-task Stacked Bi-LSTMs using the grammatical feature.
 
 # Brief description
 - text_processing.py
