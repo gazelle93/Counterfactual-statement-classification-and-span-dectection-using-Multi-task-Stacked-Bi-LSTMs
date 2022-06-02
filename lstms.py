@@ -1,3 +1,4 @@
+import torch
 import torch.nn as nn
 
 class LSTMTagger(nn.Module):
@@ -18,13 +19,17 @@ class LSTMTagger(nn.Module):
 
 
 class SequenceTagger(nn.Module):
-    def __init__(self, input_dim, hidden_dim, pos_to_ix, tag_to_ix):
+    def __init__(self, input_dim, hidden_dim, pos_to_ix, tag_to_ix, subtask):
         super().__init__()
-
+        self.subtask = subtask
         self.pos_tagger = LSTMTagger(input_dim, hidden_dim//2, len(pos_to_ix), bidirectional=True)
         self.ac_tagger = LSTMTagger(input_dim, hidden_dim//2, len(tag_to_ix), bidirectional=True)
 
         self.dropout = nn.Dropout(p=0.01)
+
+        if subtask == "1":
+            self.clf_layer = nn.Linear(len(tag_to_ix)*2, len(tag_to_ix))
+
 
 
     def forward(self, input_embedding, returning_layer):
@@ -37,4 +42,10 @@ class SequenceTagger(nn.Module):
         hidden_states = self.dropout(lstm_tuple[0])
         predicted_tags, _ = self.ac_tagger(hidden_states)
 
-        return predicted_tags
+        if self.subtask == "1":
+            start_emb = predicted_tags[:,0,:]
+            end_emb = predicted_tags[:,-1,:]
+
+            return self.clf_layer(torch.concat((start_emb, end_emb), dim=1))
+        else:
+            return predicted_tags
