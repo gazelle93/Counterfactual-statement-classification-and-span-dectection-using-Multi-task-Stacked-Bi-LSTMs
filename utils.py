@@ -145,6 +145,7 @@ def get_evaluation_result(gold_list, pred_list):
     else:
         f1score = 2 * precision * recall / (precision + recall)
 
+    print("Subtask 2 result")
     print("Antecedent\tPrecision: {}, Recall: {}, F1-score: {}".format(precision_A, recall_A, f1score_A))
     print("Consequent\tPrecision: {}, Recall: {}, F1-score: {}".format(precision_C, recall_C, f1score_C))
     print("Macro-Avg\tPrecision: {}, Recall: {}, F1-score: {}".format(round(precision,2), round(recall,2), round(f1score,2)))
