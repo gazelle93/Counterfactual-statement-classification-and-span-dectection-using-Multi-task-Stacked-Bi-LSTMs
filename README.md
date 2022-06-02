@@ -3,7 +3,7 @@
 - Subtask 1: Binary classification task classifying whether the given text is counterfactual or not.
 - Subtask 2: Span detection task detecting the span of the antecedent and the consequent.
 - Applied architecture: Multi-task Stacked Bi-LSTMs using the grammatical feature.
-- This project aims to implement the Multi-task-Stacked-Bi-LSTMs applied in detecting the span of the counterfactual statement (subtask 2) using ELMo Word Embedding and POS tags.
+- This project aims to implement the Multi-task-Stacked-Bi-LSTMs applied in detecting the span of the counterfactual statement (Subtask 2) using ELMo Word Embedding and POS tags.
 
 # Brief description
 - text_processing.py
