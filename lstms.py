@@ -5,7 +5,7 @@ class LSTMTagger(nn.Module):
     def __init__(self, input_dim, hidden_dim, output_dim, bidirectional=True):
         super().__init__()
         self.lstmlayer = nn.LSTM(input_dim, hidden_dim, bidirectional=bidirectional)
-        self.dropout = nn.Dropout(p=0.01)
+        self.dropout = nn.Dropout(p=0.05)
         self.activation = nn.ReLU()
         self.tagger = nn.Linear(hidden_dim*2, output_dim)
 
@@ -25,7 +25,7 @@ class SequenceTagger(nn.Module):
         self.pos_tagger = LSTMTagger(input_dim, hidden_dim//2, len(pos_to_ix), bidirectional=True)
         self.ac_tagger = LSTMTagger(input_dim, hidden_dim//2, len(tag_to_ix), bidirectional=True)
 
-        self.dropout = nn.Dropout(p=0.01)
+        self.dropout = nn.Dropout(p=0.05)
 
         if subtask == "1":
             self.clf_layer = nn.Linear(len(tag_to_ix)*2, len(tag_to_ix))
