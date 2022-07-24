@@ -32,7 +32,7 @@
 - num_epochs(int, defaults to 100): The number of epochs for training.
 
 # References
-- Multi-task-Stacked-Bi-LSTMs: Sung, M., Bagherzadeh, P., & Bergler, S. (2020, December). CLaC at SemEval-2020 Task 5: Muli-task Stacked Bi-LSTMs. In Proceedings of the Fourteenth Workshop on Semantic Evaluation (pp. 445-450). (https://aclanthology.org/2020.semeval-1.54/) \hyperlink{https://aclanthology.org/2020.semeval-1.54/}{hi}
+- Multi-task-Stacked-Bi-LSTMs: Sung, M., Bagherzadeh, P., & Bergler, S. (2020, December). CLaC at SemEval-2020 Task 5: Muli-task Stacked Bi-LSTMs. In Proceedings of the Fourteenth Workshop on Semantic Evaluation (pp. 445-450). (https://aclanthology.org/2020.semeval-1.54/)
 - Stanza: Qi, P., Zhang, Y., Zhang, Y., Bolton, J., & Manning, C. D. (2020). Stanza: A Python natural language processing toolkit for many human languages. arXiv preprint arXiv:2003.07082.
 - Spacy: Matthew Honnibal and Ines Montani. 2017. spaCy 2: Natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing. To appear (2017).
 - Counterfactual Dataset: Yang, X., Obadinma, S., Zhao, H., Zhang, Q., Matwin, S., & Zhu, X. (2020). SemEval-2020 task 5: Counterfactual recognition. arXiv preprint arXiv:2008.00563. (https://github.com/arielsho/SemEval-2020-Task-5)
